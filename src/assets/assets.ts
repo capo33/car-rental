@@ -198,7 +198,19 @@ export const dummyCarData: DummyCar[] = [
     }
 ];
 
-export const dummyMyBookingsData = [
+export interface DummyBooking {
+  _id: string;
+  car: DummyCar;
+  user: string;
+  owner: string;
+  pickupDate: string;
+  returnDate: string;
+  status: 'pending' | 'confirmed' | 'cancelled';
+  price: number;
+  createdAt: string;
+}
+
+export const dummyMyBookingsData: DummyBooking[] = [
     {
         "_id": "68482bcc98eb9722b7751f70",
         "car": dummyCarData[0],
