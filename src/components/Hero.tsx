@@ -3,6 +3,7 @@ import { assets, cityList } from '../assets/assets'
 
 const Hero = () => {
   const [pickupLocation, setPickupLocation] = useState('')
+
   return (
     <div className='h-screen flex flex-col items-center justify-center gap-14 bg-light text-center'>
       <h1 className='text-4xl md:text-5xl font-semibold'>Welcome to Our Car Rental Service</h1>
@@ -11,7 +12,7 @@ const Hero = () => {
           <div className='flex flex-col items-start gap-2'>
             <select
               required
-              className="outline-none"
+              className="outline-none "
               value={pickupLocation}
               onChange={(e) => setPickupLocation(e.target.value)}
             >
